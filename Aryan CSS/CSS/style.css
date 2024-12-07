@@ -1,0 +1,739 @@
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*  Global styling  */
+body {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+/*  set the text properties */
+h1 {
+  font-family: "DM Serif Text", serif;
+}
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Merriweather", serif;
+}
+
+p,
+a,
+li,
+span {
+  font-size: 1.2em;
+  font-family: "Ubuntu", sans-serif;
+  text-decoration: none;
+}
+
+/*  css for header */
+header {
+  z-index: 999;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 5em;
+  background-color: #ffffff;
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/*  css for website logo */
+header > div {
+  height: 100px;
+}
+
+header > div > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+header > div > a > img {
+  width: 100px;
+  height: auto;
+  margin: 0 0 0 25px;
+}
+
+/*  css for navigation bar and links  */
+header > nav {
+  display: flex;
+  margin: 0 15px 0 0;
+}
+button.toggleButton {
+  padding: 1.2em;
+  display: none;
+  border: none;
+  background-color: #0034d9;
+  margin: 0 1em 0 0;
+  border-radius: 2px;
+}
+header button > i {
+  font-size: 1.6em;
+  color: #fe0;
+}
+header > nav > menu {
+  list-style: none;
+  display: flex;
+}
+header > nav > menu > li {
+  padding: 0 15px;
+}
+header > nav > menu > li > a {
+  color: #0e0e0e;
+}
+div.hiddenMenu {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 50%;
+  margin: 5em 0 0 0;
+  height: 100%;
+  background-color: #ffffff;
+  z-index: 999;
+}
+div.hiddenMenu > nav {
+  margin: 0 15px 0 0;
+}
+div.hiddenMenu > nav > menu {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+div.hiddenMenu > nav > menu > li {
+  padding: 1em 1em;
+}
+div.hiddenMenu > nav > menu > li > a {
+  color: #0e0e0e;
+}
+
+div.showMenu {
+  display: flex;
+  left: 0;
+}
+nav.showMenu {
+  display: none;
+}
+
+/* Masthead Styles */
+section.Intro {
+  width: 100%;
+  display: flex;
+  position: relative;
+  padding: 10em 10em 6em 10em;
+  background-color: #0034d9;
+  box-sizing: border-box;
+}
+div.ps5Logo {
+  padding: 0 2em 0 0;
+}
+div.ps5Logo > img {
+  height: 20em;
+  width: auto;
+}
+div.ps5console > img {
+  height: 25em;
+  width: auto;
+}
+div.introParagraph {
+  padding: 0 0 2em 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #e0e0e0;
+}
+
+div.introParagraph > h1 {
+  font-size: 3em;
+  margin-bottom: 0.2em;
+}
+div.introParagraph > p {
+  margin: 0;
+  line-height: 2em;
+}
+div.introParagraph > a {
+  color: #3f000b;
+}
+div.introParagraph > a > span {
+  display: flex;
+  background-color: #fe0;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin: 1em 0 0 0;
+}
+
+/* Latest Games Styles */
+section.product {
+  margin: 3em 0 0 0;
+  width: 100%;
+  display: flex;
+  background-color: #0034d9;
+  position: relative;
+}
+
+div.productTitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+div.productTitle > h2 {
+  font-size: 2.3em;
+  font-weight: 700;
+  width: 80%;
+  margin: 0px;
+  padding: 1em 0 0 0;
+  color: #e0e0e0;
+}
+div.productTitle > p {
+  text-align: center;
+  max-width: 50%;
+}
+div.productTitle > a {
+  color: #3f000b;
+  padding: 1em 0 0 0;
+}
+div.productTitle > a span {
+  display: flex;
+  background-color: #fe0;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+div.featuredProduct {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  background-color: #19223e;
+  margin: auto;
+  overflow: hidden;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-snap-align: start;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+div.featuredProduct::-webkit-scrollbar {
+  /* this is to hide scrollbar  */
+  display: none;
+}
+div.featuredProduct > article p {
+  padding: 3px 0;
+}
+div.featuredProduct > article {
+  display: flex;
+  flex-direction: column;
+  background-color: #f2f2f2;
+  margin: 1em 3em;
+  border: 1px solid rgb(174, 13, 13);
+  border-radius: 4px;
+  padding: 0 1em;
+}
+div.featuredProduct > article div:first-child {
+  display: flex;
+  border-radius: 3px;
+  height: 300px;
+  width: 250px;
+  justify-content: center;
+  align-items: center;
+}
+div.featuredProduct > article div:first-child:hover img {
+  transform: scale(1.1);
+}
+div.featuredProduct > article div:first-child img {
+  transition: all 0.3s ease-in-out;
+  margin: auto;
+  max-width: 250px;
+}
+div.featuredProduct > article > div:nth-child(2),
+div.featuredProduct > article > div:nth-child(3) {
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px;
+}
+
+div.featuredProduct > article > div:nth-child(2) > p {
+  font-size: 0.9em;
+  color: #6f6f6f;
+  margin: 0px;
+}
+div.featuredProduct > article > div:last-child {
+  text-align: center;
+  margin: 0 0 1em 0;
+}
+div.featuredProduct > article > div:last-child > a {
+  display: block;
+  padding: 10px 0;
+  width: 100%;
+  border-radius: 5px;
+  background-color: #fe0;
+  transition: all 0.2s ease-in-out;
+  color: #3f000b;
+  font-weight: bold;
+}
+div.featuredProduct > article > div:last-child > a:hover {
+  transform: scale(1.1);
+}
+/* About Us Styles */
+.aboutUS {
+  background-image: url("../Images/playstation.jpg");
+  padding: 6em 2em;
+  background-size: cover;
+}
+
+.aboutUS > div {
+  color: #e0e0e0;
+  background-color: #0077b6;
+  padding: 4em 8em;
+  border-radius: 5px;
+}
+.aboutUS h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.aboutUS p {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.aboutUS a {
+  color: #3f000b;
+  padding: 1em 0 0 0;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+.aboutUS a span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10em;
+  background-color: #fe0;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+/* Hero Section Styles */
+.aboutIntro {
+  background-image: url("aboutIntro-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 120px 0;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.aboutIntro:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 119, 182, 0.7);
+  z-index: -1;
+}
+
+.aboutIntro h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.aboutIntro p {
+  font-size: 24px;
+  font-weight: 500;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* About Us Styles */
+.about-us {
+  padding: 5em 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.aboutContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #005a8c;
+  border-radius: 5px;
+  padding: 2em 13em;
+margin: 0 0 3em 0;
+}
+
+.aboutContent h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #fe0;
+}
+
+.aboutContent p {
+  max-width: 800px;
+  text-align: center;
+  line-height: 1.8;
+  color: #e0e0e0;
+}
+
+/* Hero Section Styles */
+.aboutIntro {
+  color: #fff;
+  padding: 120px 0;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.aboutIntro:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 119, 182, 0.7);
+  z-index: -1;
+}
+
+.aboutIntro h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.aboutIntro p {
+  font-size: 24px;
+  font-weight: 500;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact Section Styles */
+.contact {
+  padding: 1em 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contactContent,
+.contactInfo {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  flex-basis: 30%;
+  margin: 0 1em;
+}
+.contactContent h2,
+.contactInfo h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.form > div {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #0077b6;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #005a8c;
+}
+
+.contactInfo ul {
+  list-style-type: none;
+}
+
+.contactInfo li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.contactInfo i {
+  font-size: 24px;
+  color: #0077b6;
+  margin-right: 10px;
+}
+
+/* Product Section Styles */
+section.moreGames {
+  background-color: #0077b6;
+  padding: 3em 0;
+}
+section.moreGames h2 {
+  text-align: center;
+  padding: 0 0 1em 0;
+  font-size: 2.1em;
+  color: #e0e0e0;
+}
+.products {
+  padding: 60px 0;
+}
+
+.products h2 {
+  font-size: 2.2em;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.products > div {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.gameProduct {
+  display: flex;
+  background-color: #fff;
+  align-items: center;
+  justify-content: start;
+  width: 80%;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+.gameProduct div {
+  flex-basis: 50%;
+  overflow: hidden;
+  border-radius: 8px 0 0 8px;
+}
+
+.gameProduct div img {
+  width: 70%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gameProduct div:hover img {
+  transform: scale(1.1);
+}
+
+.productInfo {
+  flex-basis: 50%;
+  padding: 40px;
+}
+
+.productInfo h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.productInfo p:nth-child(1) {
+  font-size: 24px;
+  font-weight: 600;
+  color: #0077b6;
+  margin-bottom: 20px;
+}
+
+.productInfo p:nth-child(2) {
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #0077b6;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 1em 0 0 0;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #005a8c;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #0077b6;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+/* Footer Styles */
+footer {
+  background-color: #ffffff;
+  color: #0e0e0e;
+  text-align: center;
+  padding: 5em 1em;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+footer div {
+  flex-basis: 30%;
+}
+
+/* ------- css for responsive layout of website------- */
+
+@media only screen and (max-width: 1280px) {
+  section.Intro {
+    padding: 10em 5em 6em 5em;
+  }
+  div.ps5Logo {
+    padding: 0 2em 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  div.ps5Logo > img {
+    height: 15em;
+  }
+  div.ps5console > img {
+    height: 25em;
+    width: auto;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  section.Intro {
+    padding: 10em 2em 6em 2em;
+  }
+  div.introParagraph > h1 {
+    font-size: 2em;
+  }
+  div.introParagraph > p {
+    line-height: 1.1em;
+  }
+  .gameProduct div:nth-child(1) {
+    flex-basis: 30%;
+  }
+  .gameProduct div:nth-child(2) {
+    flex-basis: 70%;
+  }
+  .gameProduct div img {
+    width: 100%;
+  }
+  .contactContent,
+  .contactInfo {
+    flex-basis: 40%;
+  }
+}
+@media only screen and (max-width: 769px) {
+  section.product {
+    flex-direction: column;
+  }
+  div.productTitle > h2 {
+    padding: 0.5em 0 0.5em 0;
+    font-size: 2em;
+    width: 90%;
+    text-align: center;
+  }
+  .gameProduct,
+  div.featuredProduct {
+    margin: 0.5em auto;
+    width: 90%;
+  }
+  section.Intro {
+    flex-direction: column;
+  }
+  div.introParagraph > h1 {
+    margin: 1em 0 0.5em 0;
+    font-size: 2em;
+  }
+  .aboutUS > div {
+    padding: 2em 4em;
+  }
+  footer div {
+    flex-basis: 51%;
+    padding: 1em 0;
+  }
+  .gameProduct {
+    flex-direction: column;
+    height: auto;
+  }
+  .gameProduct div {
+    border-radius: 8px 8px 0 0;
+  }
+  .contactContent,
+  .contactInfo {
+    flex-basis: 60%;
+    margin: 1em 0;
+  }
+}
+@media only screen and (max-width: 640px) {
+  div.ps5Logo > img {
+    height: 10em;
+  }
+  .contactContent,
+  .contactInfo {
+    flex-basis: 90%;
+    margin: 1em 0;
+  }
+  header > nav {
+    display: none;
+  }
+  button.toggleButton {
+    display: flex;
+  }
+  .aboutContent {
+    padding: 1em 3em;
+  }
+}
+@media only screen and (max-width: 426px) {
+  footer > div.footerLogo > img {
+    width: 15em;
+    height: auto;
+  }
+}
